@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import StripeCheckout from "react-stripe-checkout";
 
 function App() {
@@ -33,18 +31,7 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-
-        <a
-          className="App-link"
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div >
         <StripeCheckout
           stripeKey="LEARNCODEONLINE"
           token={makePayment}
@@ -53,11 +40,11 @@ function App() {
           shippingAddress
           billingAddress
         >
-          <button className="btn-large blue">
+          <button >
             Buy react is just {product.price} $
           </button>
         </StripeCheckout>
-      </header>
+      
     </div>
   );
 }
