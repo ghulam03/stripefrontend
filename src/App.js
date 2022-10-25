@@ -33,7 +33,7 @@ function App() {
   return (
     <div >
         <StripeCheckout
-          stripeKey="LEARNCODEONLINE"
+          stripeKey={process.env.REACT_APP_KEY}
           token={makePayment}
           name="Buy React"
           amount={product.price * 100}
